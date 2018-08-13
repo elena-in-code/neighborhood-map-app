@@ -3,30 +3,35 @@
         "title": "Museo Nacional Centro de Arte Reina Sofía",
         "name": "",
         "position": { "lat": 40.408081, "lng": -3.694544},
-        "key": "01"
+        "key": "01",
+        "locationURL":"Museo%20Nacional%20Centro%20de%20Arte%20Reina%20Sofía"
     },
     {
         "title": "Museo Nacional del Prado",
         "name": "",
         "position": { "lat": 40.414047, "lng": -3.692116 }, 
-        "key": "02"
+        "key": "02",
+        "locationURL":"Museo%20del%20Prado"
     },
     {
-        "title": "Museo Nacional Thyssen-Bornemisza",
+        "title": "Museo Nacional de Ciencias Naturales",
         "name": "",
-        "position": { "lat": 40.416290, "lng": -3.694936 },
-        "key": "03"
+        "position": { "lat": 40.441289, "lng": -3.689701},
+        "key": "03",
+        "locationURL":"Museo%20Nacional%20de%20Ciencias%20Naturales"
     },
     {
         "title": "Caixa Forum",
         "name": "",
         "position": { "lat": 40.412075, "lng": -3.693585 },
-        "key": "04"
+        "key": "04",
+        "locationURL":"CaixaForum%20Madrid"
     },
     {
-        "title": "Museo del Ferrocarril de Madrid",
+        "title": "Matadero Madrid",
         "name": "",
-        "position": { "lat": 40.403508, "lng": -3.691314 },
-        "key": "05"
+        "position": { "lat": 40.392561, "lng": -3.697674 },
+        "key": "05",
+        "locationURL":"Matadero%20Madrid"
     }
 ]
