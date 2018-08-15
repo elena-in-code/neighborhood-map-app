@@ -18,9 +18,15 @@ class App extends Component {
 
 componentDidMount() {
   this.loadingMap();
-  //this.wikipediaCall();
-  console.log(this.state.locationsContent);
 }
+
+loadingMap() {
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDF3Tz_J23Bb4xflymzOMsyf2NCtgrZCa8&callback=initMap";
+  window.initMap = this.initMap;
+  document.body.appendChild(script);
+}; 
 
 initMap() {
   const madridCoord = {lat: 40.417036, lng: -3.703816};
@@ -38,25 +44,13 @@ initMap() {
       animation: window.google.maps.Animation.DROP
     });
     this.state.markers.push(marker);
-    //console.log(location);
-    //console.log('MARKER',marker);
     marker.addListener('click', () => {
       this.wikipediaCall(location)
     })
   })
 }
 
-loadingMap() {
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDF3Tz_J23Bb4xflymzOMsyf2NCtgrZCa8&callback=initMap";
-
-  window.initMap = this.initMap;
-  document.body.appendChild(script);
-};
-
 wikipediaCall = (location) => {
-  //console.log(location.locationURL);
   const locationURL = location.locationURL;
   fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exchars=600&exintro=1&explaintext=1&titles=${locationURL}&format=json&origin=*&formatversion=2`)
   .then( response => response.json())
@@ -65,14 +59,42 @@ wikipediaCall = (location) => {
     this.setState({
       locationsContent: getLocationContent
     })
-    console.log(this.state.locationsContent);
-  })
+  })  
 }
 
-  render() {
+
+render() {
     return (
       <div id="App">
         <div id="map" role="application"></div>
+        <section className="sidebar">
+
+          <select className="">
+              <option>
+                All
+              </option>
+          {this.state.locations.map(location => (
+              <option>
+                {location.title}
+              </option>
+            ))}
+            
+          </select>
+
+          <ul>
+            {this.state.locations.map(location => (
+              <li>
+                {location.title}
+              </li>
+            ))}
+          </ul>
+
+          <div id="content" onclick={this.initMap}>
+            {/*title??name*/}
+            <p>{this.state.locationsContent}</p>
+          </div>
+
+        </section>
       </div>
     );
   }
