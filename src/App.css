@@ -1,7 +1,6 @@
 #map {
-    height: 100%;
-    width: 100%;
-    position: unset !important;
+    height: 100vh;
+    width: 100vw;
 }
 
 html, body {
@@ -10,12 +9,64 @@ html, body {
     padding: 0;
 }
 
+h3 {
+    text-align: center;
+    font-weight: 200;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
 .sidebar {
     height: 100vh;
     width: 30%;
     position: fixed;
     z-index:10;
-    background: white;
+    background: grey;
     text-align: justify;
     padding: 20px;
+    color: white;
+	min-width: 300px;
+	max-width: 400px;
+	top: 0;
+	left: 0;
+    overflow: auto;
+}
+
+ul { padding-left: 0; }
+
+.listItem {
+    cursor: pointer;
+    margin: 20px 5px;
+    list-style: none;
+    line-height: 1.2;
+}
+
+.listItem:hover { color: black; }
+
+p { line-height: 1.5;}
+
+.select {
+    border-radius: 10px;
+    padding: 10px 5px;
+    color: grey;
+    width: -webkit-fill-available;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 830px) {
+
+    #map{
+        height: 60vh;
+    }
+
+    .sidebar{
+        height: 100%;
+        width: 80%;
+        text-align: center;
+		position: static;
+        margin: auto;
+        max-width: unset;
+        text-align: justify;
+    }
 }
