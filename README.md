@@ -3,6 +3,9 @@
 project part of the [**Front-End Web Developer Nanodegree Udacity**](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001).
 
 
+![Memory Game Gif](https://user-images.githubusercontent.com/30567608/44284058-88c56c80-a260-11e8-96f8-4e09558f92e3.gif "gif of the map app")
+
+
 ### Launch the project:
 * Clone the repo or download the Zip Files into your pc
 * install all project dependencies with `npm install`
