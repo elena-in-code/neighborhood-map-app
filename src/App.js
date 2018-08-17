@@ -64,7 +64,7 @@ initMap() {
 //Wikipedia API
 wikipediaCall = (location) => {
   const locationURL = location.locationURL;
-  fetch(`htps://en.wikipedia.org/w/api.php?action=query&prop=extracts&exchars=600&exintro=1&explaintext=1&titles=${locationURL}&format=json&origin=*&formatversion=2`)
+  fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exchars=600&exintro=1&explaintext=1&titles=${locationURL}&format=json&origin=*&formatversion=2`)
   .then( response => response.json())
   .then( data => {
     const getLocationContent = data.query.pages[0].extract;

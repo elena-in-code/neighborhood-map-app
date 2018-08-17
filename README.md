@@ -2,14 +2,6 @@
 
 project part of the [**Front-End Web Developer Nanodegree Udacity**](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001).
 
-### Acknowledgments:
-Thanks to: <br/>
-https://github.com/MaZchao<br/>
-https://github.com/BycorSanchez<br/>
-https://github.com/maevanapcontact<br/>
-https://github.com/Syknapse<br/>
-for sharing their code for the rest to get inspiration <br/>
-<hr>
 
 ### Launch the project:
 * Clone the repo or download the Zip Files into your pc
@@ -26,6 +18,17 @@ for sharing their code for the rest to get inspiration <br/>
 * This locations are museums located in the capital.
 * You can get information for each location by clicking on the marker located in the map, clicking over the list on the aside section, or by filtering using the selector.
 * Selecting a location will make the marker of that location animate so you can easily know where it is located.
+
+### Acknowledgments:
+Thanks to: <br/>
+https://github.com/MaZchao<br/>
+https://github.com/BycorSanchez<br/>
+https://github.com/maevanapcontact<br/>
+https://github.com/Syknapse<br/>
+for sharing their code for the rest to get inspiration <br/>
+
+### Resources:
+* https://html.spec.whatwg.org/multipage/#toc-semantics
 
 <hr>
 
