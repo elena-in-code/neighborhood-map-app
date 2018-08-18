@@ -11,7 +11,7 @@ class List extends Component {
                 key={this.props.location.key} 
                 onClick={() => this.props.onLocationClick(this.props.location)}>
 
-                🏛️ {this.props.location.title}
+                <span role="img" aria-label="List Item Icon Museum" alt="icon museum">🏛️</span> {this.props.location.title}
 
             </li>
         )

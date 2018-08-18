@@ -1,6 +1,6 @@
 # React Neighborhood Map App
 
-project part of the [**Front-End Web Developer Nanodegree Udacity**](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001).
+Final project part of the [**Front-End Web Developer Nanodegree Udacity**](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001).
 
 
 ![Memory Game Gif](https://user-images.githubusercontent.com/30567608/44284058-88c56c80-a260-11e8-96f8-4e09558f92e3.gif "gif of the map app")
@@ -9,8 +9,9 @@ project part of the [**Front-End Web Developer Nanodegree Udacity**](https://eu.
 ### Launch the project:
 * Clone the repo or download the Zip Files into your pc
 * install all project dependencies with `npm install`
-* Used Create React App
 * start the development server with `npm start`
+* Used Create React App
+* Service Worker using default, will only be available in production.
 
 ### Third party API usage:
 * For map and markers: [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial?hl=en_GB)

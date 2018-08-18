@@ -32,7 +32,7 @@ loadingMap() {
   script.async = true;
   script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDF3Tz_J23Bb4xflymzOMsyf2NCtgrZCa8&callback=initMap";
   script.onerror = () => {
-    window.alert("Something went wrong, sorry. Please refresh the page")
+    document.write(" ❌ Something went wrong, sorry. The map is not Loading successfully. Please refresh the page")
   }
   window.initMap = this.initMap;
   document.body.appendChild(script);
@@ -73,8 +73,9 @@ wikipediaCall = (location) => {
     })
   })
   .catch( error => {
-    window.alert("Something went wrong, sorry. Please refresh the page")
-  })  
+    document.write('❌ Something went wrong, sorry. We lost the connection with Wikipedia, we are working to fix it asap. Please refresh the page')
+  })
+
 }
 //List functionality
 handleLocationInformation(location) {
@@ -95,7 +96,7 @@ filterInfo(location) {
       marker.setAnimation(window.google.maps.Animation.BOUNCE)
       setTimeout( () => marker.setAnimation(null), 1400)
     } else {
-      marker.setMap('')
+      marker.setMap(null)
     }
   })
 }
@@ -134,7 +135,7 @@ render() {
     return (
       <div id="App">
         <div tabIndex="0" id="map" role="application"></div>
-        <aside tbIndex="0" className="sidebar">
+        <aside tabIndex="0" className="sidebar">
           <h3 tabIndex="0">Madrid Best Museums</h3>
           <label htmlFor="select">
             <select tabIndex="0" className="select" onChange={this.handleSelector}>
@@ -144,6 +145,7 @@ render() {
             {this.state.locations.map(location => (
                 <Selector
                 location={location}
+                key={ location.key }
                 />
               ))}
             </select>
@@ -153,6 +155,7 @@ render() {
             {this.state.locations.map(location => (
               <List 
               location={location}
+              key={ location.key }
               onLocationClick={this.handleLocationInformation}
               />
             ))}
